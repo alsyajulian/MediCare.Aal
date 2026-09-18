@@ -1,9 +1,13 @@
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
 
-        <a class="navbar-brand" href="/">
+        <!-- <a class="navbar-brand" href="/">
             <i class="bi bi-heart-pulse-fill"></i>
             Medi<span>Care</span>
+        </a> -->
+
+        <a class="navbar-brand" href="/">
+            <img src="{{ asset('images/logo2.png') }}" alt="MediCare Hospital">
         </a>
 
         <button class="navbar-toggler"
@@ -111,9 +115,9 @@
 
             </ul>
 
-            <a href="{{ route('login') }}" class="btn btn-primary">
+            <!-- <a href="{{ route('login') }}" class="btn btn-primary">
                 Masuk
-            </a>
+            </a> -->
 
         </div>
     </div>
@@ -122,10 +126,16 @@
 
 <style>
 .navbar .btn-primary {
-    
+
     padding: 8px 20px;
     font-size: 15px;
     line-height: 1.5;
     height: auto;
+}
+
+.navbar-brand img {
+    height: 42px;
+    width: auto;
+    display: block;
 }
 </style>

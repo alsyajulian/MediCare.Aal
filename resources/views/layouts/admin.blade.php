@@ -11,6 +11,8 @@
         @yield('title', 'Admin MediCare')
     </title>
 
+    <link rel="icon" type="image/png" href="{{ asset('images/logo3.png') }}">
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -21,232 +23,9 @@
         rel="stylesheet"
     >
 
-    <style>
+    @vite('resources/css/admin.css')
 
-        :root {
-            --primary: #063b78;
-            --primary-light: #1264c4;
-            --soft-blue: #eef6ff;
-            --background: #f6f9fd;
-            --border: #e5edf6;
-            --text: #172b4d;
-            --muted: #718096;
-        }
-
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        body {
-            margin: 0;
-            background: var(--background);
-            color: var(--text);
-            font-family: Arial, sans-serif;
-        }
-
-
-        /* =========================
-           SIDEBAR
-        ========================= */
-
-        .admin-sidebar {
-
-            position: fixed;
-
-            inset: 0 auto 0 0;
-
-            width: 250px;
-
-            height: 100vh;
-
-            padding: 24px 16px;
-
-            background: var(--primary);
-
-            color: white;
-
-            overflow-y: auto;
-
-            z-index: 1000;
-        }
-
-
-        .admin-logo {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 8px;
-
-            margin: 0 10px 35px;
-
-            font-size: 22px;
-
-            font-weight: 700;
-
-            position: relative;
-        }
-
-
-        .admin-logo i {
-            font-size: 25px;
-        }
-
-
-        .admin-logo span {
-
-            display: block;
-
-            position: absolute;
-
-            margin-top: 38px;
-
-            margin-left: 34px;
-
-            font-size: 8px;
-
-            letter-spacing: 2.5px;
-
-            opacity: .65;
-        }
-
-
-        .sidebar-title {
-
-            margin: 0 12px 8px;
-
-            color: rgba(255,255,255,.45);
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-        }
-
-
-        .sidebar-link {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            width: 100%;
-
-            padding: 11px 13px;
-
-            margin-bottom: 4px;
-
-            border: 0;
-
-            border-radius: 9px;
-
-            background: transparent;
-
-            color: rgba(255,255,255,.82);
-
-            text-decoration: none;
-
-            font-size: 13px;
-
-            transition: .2s ease;
-        }
-
-
-        .sidebar-link i {
-
-            width: 20px;
-
-            text-align: center;
-
-            font-size: 16px;
-        }
-
-
-        .sidebar-link:hover,
-        .sidebar-link.active {
-
-            background: var(--primary-light);
-
-            color: white;
-        }
-
-
-        .sidebar-divider {
-
-            height: 1px;
-
-            margin: 18px 8px;
-
-            background: rgba(255,255,255,.1);
-        }
-
-
-        /* =========================
-           MAIN CONTENT
-        ========================= */
-
-        .admin-content {
-
-            min-height: 100vh;
-
-            margin-left: 250px;
-
-            padding: 30px 34px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 992px) {
-
-            .admin-sidebar {
-                width: 220px;
-            }
-
-            .admin-content {
-
-                margin-left: 220px;
-
-                padding: 25px;
-            }
-
-        }
-
-
-        @media (max-width: 768px) {
-
-            .admin-sidebar {
-
-                position: relative;
-
-                width: 100%;
-
-                height: auto;
-            }
-
-
-            .admin-content {
-
-                margin-left: 0;
-
-                padding: 20px 15px;
-            }
-
-        }
-
-    </style>
-
-    @stack('styles')
+    
 
 </head>
 
@@ -264,15 +43,7 @@
         {{-- LOGO --}}
 
         <div class="admin-logo">
-
-            <i class="bi bi-plus-lg"></i>
-
-            MediCare
-
-            <span>
-                HOSPITAL
-            </span>
-
+            <img src="{{ asset('images/logo5.png') }}" alt="MediCare Hospital">
         </div>
 
 

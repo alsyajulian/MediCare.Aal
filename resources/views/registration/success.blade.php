@@ -153,7 +153,7 @@
 
 
                     {{-- BUTTON --}}
-                    <div class="d-flex justify-content-center gap-2 mt-4">
+                    <div class="d-flex justify-content-center gap-2 mt-4 flex-wrap">
 
                         <a
                             href="{{ route('home') }}"
@@ -163,9 +163,18 @@
                         </a>
 
                         <a
-                            href="{{ route('doctors.schedule') }}"
+                            href="{{ route('registration.checkStatus') }}"
                             class="btn btn-primary"
                         >
+                            <i class="bi bi-search me-1"></i>
+                            Cek Status Pendaftaran
+                        </a>
+
+                        <a
+                            href="{{ route('doctors.schedule') }}"
+                            class="btn btn-outline-primary"
+                        >
+                            <i class="bi bi-calendar3 me-1"></i>
                             Lihat Jadwal Dokter
                         </a>
 

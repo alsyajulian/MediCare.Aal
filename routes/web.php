@@ -137,6 +137,12 @@ Route::get('/pendaftaran', [RegistrationController::class, 'create'])
 Route::post('/pendaftaran', [RegistrationController::class, 'store'])
     ->name('registration.store');
 
+Route::get('/cek-pendaftaran', [RegistrationController::class, 'checkStatus'])
+    ->name('registration.checkStatus');
+
+Route::patch('/registrations/{registration}/status', [AdminRegistrationController::class, 'updateStatus'])
+    ->name('admin.registrations.updateStatus');
+
 Route::get('/pendaftaran/berhasil/{registration}', [RegistrationController::class, 'success'])
     ->name('registration.success');
 
@@ -175,11 +181,32 @@ Route::get('/layanan', function () {
 
 
 // Artikel
-Route::get('/artikel', function () {
+Route::get('/artikel', function (Request $request) {
 
-    $articles = Article::latest('published_at')->get();
+    // Ambil semua artikel untuk menghitung kategori
+    $allArticles = Article::latest('published_at')->get();
 
-    return view('articles.index', compact('articles'));
+    // Query artikel yang akan ditampilkan
+    $query = Article::latest('published_at');
+
+    // Filter berdasarkan kategori
+    if ($request->filled('category')) {
+        $query->where('category', $request->category);
+    }
+
+    $articles = $query->get();
+
+    // Ambil daftar kategori + jumlah artikelnya
+    $categoryCounts = $allArticles
+        ->groupBy('category')
+        ->map(function ($category) {
+            return $category->count();
+        });
+
+    return view('articles.index', compact(
+        'articles',
+        'categoryCounts'
+    ));
 
 })->name('articles.index');
 

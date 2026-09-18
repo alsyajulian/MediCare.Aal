@@ -7,6 +7,8 @@
 
     <title>Login Admin - MediCare Hospital</title>
 
+    <link rel="icon" type="image/png" href="{{ asset('images/logo3.png') }}">
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -317,6 +319,21 @@
 
         }
 
+        /* LOGIN LOGO */
+
+        .login-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .login-logo img {
+            width: 50px;
+            height: auto;
+            display: block;
+        }
+
     </style>
 
 </head>
@@ -342,7 +359,7 @@
             {{-- LOGO --}}
 
             <div class="login-logo">
-                <i class="bi bi-heart-pulse-fill"></i>
+                <img src="{{ asset('images/logo3.png') }}" alt="MediCare Hospital">
             </div>
 
 

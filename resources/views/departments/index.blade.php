@@ -5,13 +5,13 @@
 @section('content')
 
     {{-- HERO --}}
-    <section class="department-hero">
+    <section class="user-hero">
 
-        <div class="department-hero-overlay"></div>
+        <div class="user-hero-overlay"></div>
 
             <div class="container position-relative">
 
-                <div class="department-hero-content">
+                <div class="user-hero-content">
 
                     <small class="section-label">
                         DEPARTEMEN MEDIS
@@ -229,8 +229,8 @@
    DEPARTMENT HERO
 ================================= */
 
-.department-hero {
-    min-height: 420px;
+.user-hero {
+    min-height: 460px;
 
     display: flex;
     align-items: center;
@@ -250,12 +250,12 @@
     border-radius: 0 0 12px 12px;
 }
 
-.department-hero-content {
+.user-hero-content {
     max-width: 650px;
     padding: 75px 0;
 }
 
-.department-hero-content small {
+.user-hero-content small {
     display: inline-block;
 
     font-size: 11px;
@@ -268,7 +268,7 @@
     margin-bottom: 10px;
 }
 
-.department-hero-content h1 {
+.user-hero-content h1 {
     font-size: 20px;
     line-height: 1.15;
 
@@ -279,11 +279,11 @@
     margin: 0 0 15px;
 }
 
-.department-hero-content h1 span {
+.user-hero-content h1 span {
     color: #b13c68;
 }
 
-.department-hero-content p {
+.user-hero-content p {
     max-width: 570px;
 
     font-size: 14px;

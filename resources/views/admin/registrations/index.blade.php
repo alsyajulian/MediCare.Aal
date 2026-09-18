@@ -87,31 +87,44 @@
 
                                 <td>
 
-                                    @if ($registration->status === 'pending')
+                                    <form
+                                        action="{{ route('admin.registrations.updateStatus', $registration) }}"
+                                        method="POST"
+                                    >
 
-                                        <span class="badge text-bg-warning">
-                                            Pending
-                                        </span>
+                                        @csrf
+                                        @method('PATCH')
 
-                                    @elseif ($registration->status === 'confirmed')
+                                        <select
+                                            name="status"
+                                            class="form-select form-select-sm"
+                                            onchange="this.form.submit()"
+                                            style="width: 130px;"
+                                        >
 
-                                        <span class="badge text-bg-primary">
-                                            Confirmed
-                                        </span>
+                                            <option value="pending"
+                                                {{ $registration->status === 'pending' ? 'selected' : '' }}>
+                                                Pending
+                                            </option>
 
-                                    @elseif ($registration->status === 'completed')
+                                            <option value="confirmed"
+                                                {{ $registration->status === 'confirmed' ? 'selected' : '' }}>
+                                                Confirmed
+                                            </option>
 
-                                        <span class="badge text-bg-success">
-                                            Completed
-                                        </span>
+                                            <option value="completed"
+                                                {{ $registration->status === 'completed' ? 'selected' : '' }}>
+                                                Completed
+                                            </option>
 
-                                    @else
+                                            <option value="cancelled"
+                                                {{ $registration->status === 'cancelled' ? 'selected' : '' }}>
+                                                Cancelled
+                                            </option>
 
-                                        <span class="badge text-bg-danger">
-                                            Cancelled
-                                        </span>
+                                        </select>
 
-                                    @endif
+                                    </form>
 
                                 </td>
 

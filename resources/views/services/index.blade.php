@@ -210,7 +210,7 @@
                     href="{{ route('registration.create') }}"
                     class="btn btn-service-primary"
                 >
-                    Booking Sekarang
+                    Daftar Sekarang
                 </a>
 
             </div>
@@ -230,7 +230,7 @@
 ================================= */
 
 .services-hero {
-    min-height: 420px;
+    min-height: 460px;
 
     display: flex;
     align-items: center;

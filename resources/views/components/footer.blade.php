@@ -7,13 +7,9 @@
             <!-- Brand -->
             <div class="col-lg-4">
 
-                <h5 class="footer-logo">
-                    Medi<span>Care</span>
-                </h5>
-
-                <small class="footer-hospital">
-                    HOSPITAL
-                </small>
+                <a class="navbar-brand" href="/">
+                    <img src="{{ asset('images/logo2.png') }}" alt="MediCare Hospital">
+                </a>
 
                 <p class="footer-description">
                     Memberikan pelayanan kesehatan berkualitas

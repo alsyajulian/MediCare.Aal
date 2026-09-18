@@ -230,7 +230,7 @@
                     href="{{ route('registration.create') }}"
                     class="btn btn-service-primary"
                 >
-                    Booking Sekarang
+                    Daftar Sekarang
                 </a>
 
             </div>

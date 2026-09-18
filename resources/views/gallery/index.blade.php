@@ -243,7 +243,7 @@
 ================================= */
 
 .gallery-hero {
-    min-height: 420px;
+    min-height: 460px;
 
     display: flex;
     align-items: center;

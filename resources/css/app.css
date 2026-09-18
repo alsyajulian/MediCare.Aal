@@ -21,6 +21,7 @@ body {
     z-index: 1030;
 }
 
+
 .navbar-brand {
     color: #0f3b73 !important;
     font-size: 18px;
@@ -71,7 +72,9 @@ body {
     color: white;
 }
 
-/* STATISTICS */
+/* =========================
+   STATISTICS
+========================= */
 
 .statistics-section {
     margin-top: -45px;
@@ -134,9 +137,13 @@ body {
     margin-left: 3px;
 }
 
-/* RESPONSIVE STATISTICS */
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
+
     .statistics-section {
         margin-top: -30px;
     }
@@ -1174,14 +1181,11 @@ RESPONSIVE — MOBILE
 /* SERVICES */
 
 .service-page-card {
-    height: 100%;
     background: #ffffff;
     border: 1px solid #e1e8f0;
     border-radius: 8px;
-    padding: 22px;
+    padding: 28px 22px;
     transition: 0.2s;
-    padding-top: 50px;
-    padding-bottom: 60px;
 }
 
 .service-page-card:hover {
@@ -1881,5 +1885,104 @@ RESPONSIVE — MOBILE
 .footer-links a:hover {
     opacity: 1;
 }
+
+/* REGISTRATION */
+
+.registration-section {
+    padding-top: 30px;
+}
+
+.registration-box {
+    background: #063b78;
+    border-radius: 16px;
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.registration-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.registration-content h2 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.registration-content p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    margin: 0;
+    max-width: 500px;
+}
+
+.registration-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.registration-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.registration-btn.primary {
+    background: #ffffff;
+    color: #063b78;
+}
+
+.registration-btn.primary:hover {
+    background: #f1f5f9;
+    color: #063b78;
+}
+
+.registration-btn.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.registration-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+
+    .registration-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 24px;
+    }
+
+    .registration-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .registration-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+
+
 
 
